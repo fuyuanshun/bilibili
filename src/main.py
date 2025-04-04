@@ -12,14 +12,15 @@ request_header = {
     "User-Agent":""
 }
 
-def a():
+def start():
     result = requests.get(url, headers=request_header)
     content = result.content
 
     ##2. 4.25以上版本使用etree：
     etree = html.etree  # 获取etree
     x = etree.HTML(content)  # 获取xpath对象
+    print(content)
 
 
 if __name__ == '__main__':
-    a()
+    start()
